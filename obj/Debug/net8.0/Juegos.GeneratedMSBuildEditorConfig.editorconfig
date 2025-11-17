@@ -1,0 +1,53 @@
+is_global = true
+build_property.TargetFramework = net8.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = Juegos
+build_property.RootNamespace = Juegos
+build_property.ProjectDir = C:\Users\CampusFP\Desktop\DWES\NET\trabajo\Juegos\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
+build_property.RazorLangVersion = 8.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = C:\Users\CampusFP\Desktop\DWES\NET\trabajo\Juegos
+build_property._RazorSourceGeneratorDebug = 
+build_property.EffectiveAnalysisLevelStyle = 8.0
+build_property.EnableCodeStyleSeverity = 
+
+[C:/Users/CampusFP/Desktop/DWES/NET/trabajo/Juegos/Views/Juegos/Accion.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSnVlZ29zXEFjY2lvbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/CampusFP/Desktop/DWES/NET/trabajo/Juegos/Views/Juegos/Aventura.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSnVlZ29zXEF2ZW50dXJhLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/CampusFP/Desktop/DWES/NET/trabajo/Juegos/Views/Juegos/Estrategia.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSnVlZ29zXEVzdHJhdGVnaWEuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/CampusFP/Desktop/DWES/NET/trabajo/Juegos/Views/Juegos/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSnVlZ29zXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/CampusFP/Desktop/DWES/NET/trabajo/Juegos/Views/Juegos/Rol.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSnVlZ29zXFJvbC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/CampusFP/Desktop/DWES/NET/trabajo/Juegos/Views/Plataformas/Cloud.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGxhdGFmb3JtYXNcQ2xvdWQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/CampusFP/Desktop/DWES/NET/trabajo/Juegos/Views/Plataformas/Consolas.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGxhdGFmb3JtYXNcQ29uc29sYXMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/CampusFP/Desktop/DWES/NET/trabajo/Juegos/Views/Plataformas/Pc.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGxhdGFmb3JtYXNcUGMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
