@@ -1,0 +1,79 @@
+﻿@model List<ExamenDWES.Models.Venta>
+
+@{
+    ViewData["Title"] = "Ventas";
+    Layout = null;
+}
+
+<link rel="stylesheet" href="~/css/site.css" />
+
+<body>
+    <h1>Listado de Ventas</h1>
+
+    <p>
+        <a asp-action="Create" class="btn">Añadir Nueva Venta</a>
+    </p>
+
+    <form method="get" asp-action="Index">
+        <div>
+            <label for="producto">Filtrar por Producto:</label>
+            <select name="producto" id="producto" onchange="this.form.submit()">
+                <option value="">Todos los productos</option>
+                @foreach (var prod in ViewBag.Productos)
+                {
+                    <option value="@prod" selected="@(prod == ViewBag.ProductoSeleccionado)">@prod</option>
+                }
+            </select>
+        </div>
+    </form>
+
+    <br />
+
+    @if (Model == null || !Model.Any())
+    {
+        <p>No hay ventas registradas@(!string.IsNullOrEmpty(ViewBag.ProductoSeleccionado) ? " para el producto seleccionado" : "").</p>
+    }
+    else
+    {
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>ID Venta</th>
+                    <th>Producto</th>
+                    <th>Cantidad</th>
+                    <th>Precio Unitario</th>
+                    <th>Subtotal</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                @{
+                    double totalGeneral = 0;
+                }
+                @foreach (var venta in Model)
+                {
+                    var subtotal = venta.Cantidad * venta.Precio;
+                    totalGeneral += subtotal;
+                    <tr>
+                        <td>@venta.IdVenta</td>
+                        <td><strong>@venta.Producto</strong></td>
+                        <td>@venta.Cantidad</td>
+                        <td>@venta.Precio.ToString("C2")</td>
+                        <td>@subtotal.ToString("C2")</td>
+                        <td>
+                            <form method="post" asp-action="Delete" asp-route-id="@venta.IdVenta">
+                                <button type="submit" class="btn-eliminar">Eliminar</button>
+                            </form>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td colspan="5"><strong>Total General:</strong></td>
+                    <td><strong>@totalGeneral.ToString("C2")</strong></td>
+                </tr>
+            </tfoot>
+        </table>
+    }
+</body>
