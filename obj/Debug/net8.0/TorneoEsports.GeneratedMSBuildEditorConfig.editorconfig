@@ -1,0 +1,89 @@
+is_global = true
+build_property.TargetFramework = net8.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = TorneoEsports
+build_property.RootNamespace = TorneoEsports
+build_property.ProjectDir = C:\Users\CampusFP\Desktop\DWES\NET\trabajo\torneo_esports\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
+build_property.RazorLangVersion = 8.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = C:\Users\CampusFP\Desktop\DWES\NET\trabajo\torneo_esports
+build_property._RazorSourceGeneratorDebug = 
+build_property.EffectiveAnalysisLevelStyle = 8.0
+build_property.EnableCodeStyleSeverity = 
+
+[C:/Users/CampusFP/Desktop/DWES/NET/trabajo/torneo_esports/Views/Informes/ComparativaDano.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW5mb3JtZXNcQ29tcGFyYXRpdmFEYW5vLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/CampusFP/Desktop/DWES/NET/trabajo/torneo_esports/Views/Informes/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW5mb3JtZXNcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/CampusFP/Desktop/DWES/NET/trabajo/torneo_esports/Views/Informes/ListadoJugadores.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW5mb3JtZXNcTGlzdGFkb0p1Z2Fkb3Jlcy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/CampusFP/Desktop/DWES/NET/trabajo/torneo_esports/Views/Informes/ListadoPartidas.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW5mb3JtZXNcTGlzdGFkb1BhcnRpZGFzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/CampusFP/Desktop/DWES/NET/trabajo/torneo_esports/Views/Informes/Promedios.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW5mb3JtZXNcUHJvbWVkaW9zLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/CampusFP/Desktop/DWES/NET/trabajo/torneo_esports/Views/Informes/Top5.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW5mb3JtZXNcVG9wNS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/CampusFP/Desktop/DWES/NET/trabajo/torneo_esports/Views/Jugadores/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSnVnYWRvcmVzXERldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/CampusFP/Desktop/DWES/NET/trabajo/torneo_esports/Views/Jugadores/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSnVnYWRvcmVzXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/CampusFP/Desktop/DWES/NET/trabajo/torneo_esports/Views/Partidas/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGFydGlkYXNcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/CampusFP/Desktop/DWES/NET/trabajo/torneo_esports/Views/Partidas/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGFydGlkYXNcRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/CampusFP/Desktop/DWES/NET/trabajo/torneo_esports/Views/Partidas/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGFydGlkYXNcRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/CampusFP/Desktop/DWES/NET/trabajo/torneo_esports/Views/Partidas/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGFydGlkYXNcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/CampusFP/Desktop/DWES/NET/trabajo/torneo_esports/Views/Partidas/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGFydGlkYXNcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/CampusFP/Desktop/DWES/NET/trabajo/torneo_esports/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/CampusFP/Desktop/DWES/NET/trabajo/torneo_esports/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/CampusFP/Desktop/DWES/NET/trabajo/torneo_esports/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/CampusFP/Desktop/DWES/NET/trabajo/torneo_esports/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-4k4vplw7ug

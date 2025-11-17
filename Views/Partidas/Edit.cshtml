@@ -1,0 +1,26 @@
+﻿@model TorneoEsports.Models.DTOs.PartidaDTO
+
+<h2>Editar Partida</h2>
+
+<form asp-action="Edit" method="post">
+
+    <input type="hidden" asp-for="IdPartida" />
+
+    <label>Jugador:</label>
+    <select asp-for="IdJugador" asp-items="ViewBag.Jugadores"></select>
+    <br />
+
+    <label>Fecha:</label>
+    <input asp-for="FechaPartida" type="date" />
+    <br />
+
+    <label>Mapa:</label>
+    <input asp-for="Mapa" />
+    <br />
+
+    <label>Puntuación:</label>
+    <input asp-for="Puntuacion" />
+    <br />
+
+    <button type="submit">Guardar cambios</button>
+</form>

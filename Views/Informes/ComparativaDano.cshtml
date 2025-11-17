@@ -1,0 +1,23 @@
+﻿@model List<TorneoEsports.Models.DTOs.ComparativaDanoDTO>
+
+<h2>Comparativa de daño causado vs daño recibido</h2>
+
+<table>
+    <thead>
+        <tr>
+            <th>Jugador</th>
+            <th>Daño causado</th>
+            <th>Daño recibido</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var c in Model)
+        {
+            <tr>
+                <td>@c.Nickname</td>
+                <td>@c.TotalDanoCausado</td>
+                <td>@c.TotalDanoRecibido</td>
+            </tr>
+        }
+    </tbody>
+</table>

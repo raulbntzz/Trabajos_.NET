@@ -1,0 +1,21 @@
+﻿@model List<TorneoEsports.Models.DTOs.TopJugadorDTO>
+
+<h2>Top 5 jugadores</h2>
+
+<table>
+    <thead>
+        <tr>
+            <th>Jugador</th>
+            <th>Puntuación total</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var t in Model)
+        {
+            <tr>
+                <td>@t.Nickname</td>
+                <td>@t.PuntuacionTotal</td>
+            </tr>
+        }
+    </tbody>
+</table>

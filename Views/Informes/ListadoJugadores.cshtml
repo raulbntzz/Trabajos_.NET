@@ -1,0 +1,29 @@
+﻿@model List<TorneoEsports.Models.Entidades.Jugador>
+
+<h2>Listado de jugadores</h2>
+
+<table>
+    <thead>
+        <tr>
+            <th>Nickname</th>
+            <th>Equipo</th>
+            <th>País</th>
+            <th>Nivel</th>
+            <th>Victorias</th>
+            <th>Derrotas</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var j in Model)
+        {
+            <tr>
+                <td>@j.Nickname</td>
+                <td>@j.Equipo</td>
+                <td>@j.Pais</td>
+                <td>@j.Nivel</td>
+                <td>@j.Victorias</td>
+                <td>@j.Derrotas</td>
+            </tr>
+        }
+    </tbody>
+</table>

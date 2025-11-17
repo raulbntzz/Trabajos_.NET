@@ -1,0 +1,35 @@
+﻿@model List<TorneoEsports.Models.DTOs.PartidaDTO>
+
+<h2>Partidas</h2>
+
+<p>
+    <a asp-action="Create">Crear nueva partida</a>
+</p>
+
+<table>
+    <thead>
+        <tr>
+            <th>Jugador</th>
+            <th>Fecha</th>
+            <th>Mapa</th>
+            <th>Puntuación</th>
+            <th>Opciones</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var p in Model)
+        {
+            <tr>
+                <td>@p.NicknameJugador</td>
+                <td>@p.FechaPartida.ToShortDateString()</td>
+                <td>@p.Mapa</td>
+                <td>@p.Puntuacion</td>
+                <td>
+                    <a asp-action="Details" asp-route-id="@p.IdPartida">Detalles</a> |
+                    <a asp-action="Edit" asp-route-id="@p.IdPartida">Editar</a> |
+                    <a asp-action="Delete" asp-route-id="@p.IdPartida">Eliminar</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

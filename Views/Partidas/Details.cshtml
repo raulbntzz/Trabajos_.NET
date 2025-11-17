@@ -1,0 +1,8 @@
+﻿@model TorneoEsports.Models.Entidades.Partida
+
+<h2>Detalles de la partida</h2>
+
+<p><b>Jugador:</b> @Model.Jugador?.Nickname</p>
+<p><b>Fecha:</b> @Model.FechaPartida.ToShortDateString()</p>
+<p><b>Mapa:</b> @Model.Mapa</p>
+<p><b>Puntuación:</b> @Model.Puntuacion</p>

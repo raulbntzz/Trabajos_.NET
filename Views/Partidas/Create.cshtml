@@ -1,0 +1,43 @@
+﻿@model TorneoEsports.Models.DTOs.PartidaDTO
+
+<h2>Nueva Partida</h2>
+
+<form asp-action="Create" method="post">
+    <label>Jugador:</label>
+    <select asp-for="IdJugador" asp-items="ViewBag.Jugadores"></select>
+    <br />
+
+    <label>Fecha:</label>
+    <input asp-for="FechaPartida" type="date" />
+    <br />
+
+    <label>Mapa:</label>
+    <input asp-for="Mapa" />
+    <br />
+
+    <label>Puntuación:</label>
+    <input asp-for="Puntuacion" />
+    <br />
+
+    <label>Asesinatos:</label>
+    <input asp-for="Asesinatos" />
+    <br />
+
+    <label>Muertes:</label>
+    <input asp-for="Muertes" />
+    <br />
+
+    <label>Asistencias:</label>
+    <input asp-for="Asistencias" />
+    <br />
+
+    <label>Daño causado:</label>
+    <input asp-for="DanoCausado" />
+    <br />
+
+    <label>Daño recibido:</label>
+    <input asp-for="DanoRecibido" />
+    <br />
+
+    <button type="submit">Guardar</button>
+</form>

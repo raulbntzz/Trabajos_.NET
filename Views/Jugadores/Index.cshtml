@@ -1,0 +1,29 @@
+﻿@model List<TorneoEsports.Models.Entidades.Jugador>
+
+<h2>Jugadores</h2>
+
+<table>
+    <thead>
+        <tr>
+            <th>Nickname</th>
+            <th>Equipo</th>
+            <th>País</th>
+            <th>Nivel</th>
+            <th>Detalles</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var j in Model)
+        {
+            <tr>
+                <td>@j.Nickname</td>
+                <td>@j.Equipo</td>
+                <td>@j.Pais</td>
+                <td>@j.Nivel</td>
+                <td>
+                    <a asp-action="Details" asp-route-id="@j.IdJugador">Detalles</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

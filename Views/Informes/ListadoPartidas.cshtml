@@ -1,0 +1,31 @@
+﻿@model List<TorneoEsports.Models.DTOs.PartidaDTO>
+
+<h2>Listado de partidas</h2>
+
+<table>
+    <thead>
+        <tr>
+            <th>Jugador</th>
+            <th>Fecha</th>
+            <th>Mapa</th>
+            <th>Puntuación</th>
+            <th>Asesinatos</th>
+            <th>Muertes</th>
+            <th>Asistencias</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var p in Model)
+        {
+            <tr>
+                <td>@p.NicknameJugador</td>
+                <td>@p.FechaPartida.ToShortDateString()</td>
+                <td>@p.Mapa</td>
+                <td>@p.Puntuacion</td>
+                <td>@p.Asesinatos</td>
+                <td>@p.Muertes</td>
+                <td>@p.Asistencias</td>
+            </tr>
+        }
+    </tbody>
+</table>
