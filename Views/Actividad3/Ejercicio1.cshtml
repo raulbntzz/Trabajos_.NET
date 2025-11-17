@@ -1,0 +1,32 @@
+﻿@{
+    Layout = "~/Views/Compartido/cabecera.cshtml";
+}
+
+<link href="~/css/cssEj1.css" rel="stylesheet" />
+
+<form method="post" class="formulario">
+    <div>
+        <label for="equipoLocal">Equipo Local:</label>
+        <input name="equipoLocal" type="text" class="form-control" />
+
+        <label for="equipoVisitante">Equipo Visitante:</label>
+        <input name="equipoVisitante" type="text" class="form-control" />
+    </div>
+
+    <div>
+        <label for="golLocal">Goles Local:</label>
+        <input name="golLocal" type="number" class="form-control" />
+
+        <label for="golVisitante">Goles Visitante:</label>
+        <input name="golVisitante" type="number" class="form-control" />
+    </div>
+
+    <button type="submit" class="btn">Calcular</button>
+
+    <div>
+        @if (ViewBag.mensaje != null)
+        {
+            <h3>Resultado: @ViewBag.mensaje </h3>
+        }
+    </div>
+</form>

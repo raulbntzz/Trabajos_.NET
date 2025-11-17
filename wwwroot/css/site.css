@@ -1,0 +1,22 @@
+nav {
+    background-color: #333;
+    padding: 10px 20px;
+    text-align: center;
+    border-radius: 8px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    transition: color 0.3s ease, background-color 0.3s ease;
+    padding: 6px 12px;
+    border-radius: 4px;
+}
+
+nav a:hover {
+    background-color: #555;
+    color: #ffd700;
+}

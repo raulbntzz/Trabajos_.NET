@@ -1,0 +1,38 @@
+﻿@{
+    Layout = "~/Views/Compartido/cabecera.cshtml";
+    var jugadores = ViewBag.Jugadores;
+}
+
+<link href="~/css/cssEj2.css" rel="stylesheet" />
+
+<table>
+    <tr>
+        <th>Nombre</th>
+        <th>Dorsal</th>
+    </tr>
+
+    @foreach (var jugador in jugadores)
+    {
+        if (@jugador.Posicion == "Portero")
+        {
+            <tr>
+                <td style="background-color: yellow; color: black;">@jugador.Nombre</td>
+                <td style="background-color: yellow; color: black;">@jugador.Dorsal</td>
+            </tr>
+        }   else if (@jugador.Dorsal < 10)
+        {
+            <tr>
+                <td><strong>@jugador.Nombre</strong></td>
+                <td><strong>@jugador.Dorsal</strong></td>
+            </tr>
+        }   else if (jugador.Dorsal >= 10)
+        {
+            <tr>
+                <td>@jugador.Nombre</td>
+                <td>@jugador.Dorsal</td>
+            </tr>
+        }
+
+        
+    }
+</table>

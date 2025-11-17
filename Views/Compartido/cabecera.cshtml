@@ -1,0 +1,24 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8" />
+    <title>@ViewData["Titulo"]</title>
+    <link href="~/css/site.css" rel="stylesheet" />
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="/">Inicio</a>
+            <a href="/Actividad3/Ejercicio1">Ejercicio 1</a>
+            <a href="/Actividad3/Ejercicio2">Ejercicio 2</a>
+        </nav>
+    </header>
+
+
+    <main>
+        <h2>@ViewData["Titulo"]</h2>
+        @RenderBody()
+        <!-- Aquí inserta el contenido de la página que usa este Layout -->
+    </main>
+</body>
+</html>
