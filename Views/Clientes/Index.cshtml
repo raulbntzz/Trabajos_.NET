@@ -1,0 +1,41 @@
+﻿@model List<EjercicioSupermercado.Models.Cliente>
+
+@{
+    ViewData["Title"] = "Clientes";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Listado de Clientes</h2>
+
+@if (Model.Count == 0)
+{
+    <p>No hay clientes registrados.</p>
+}
+else
+{
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Compañía</th>
+                <th>Contacto</th>
+                <th>Cargo</th>
+                <th>Ciudad</th>
+                <th>País</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var c in Model)
+            {
+                <tr>
+                    <td>@c.IdCliente</td>
+                    <td>@c.Cia</td>
+                    <td>@c.Contacto</td>
+                    <td>@c.Cargo</td>
+                    <td>@c.Ciudad</td>
+                    <td>@c.Pais</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}

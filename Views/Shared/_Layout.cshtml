@@ -1,0 +1,30 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8" />
+    <title>@ViewData["Title"] - Ejercicio Supermercado</title>
+    <link href="~/css/site.css" rel="stylesheet" />
+</head>
+<body>
+    <header>
+        <h1>Ejercicio Supermercado</h1>
+        <nav>
+            <a asp-controller="Clientes" asp-action="Index">Clientes</a> |
+            <a asp-controller="Categorias" asp-action="Index">Categorías</a> |
+            <a asp-controller="Productos" asp-action="Index">Productos</a> |
+            <a asp-controller="Productos" asp-action="Filtrar">Filtrar Productos</a> |
+            <a asp-controller="Pedidos" asp-action="Index">Pedidos</a>
+        </nav>
+        <hr />
+    </header>
+
+    <main>
+        @RenderBody()
+    </main>
+
+    <footer>
+        <hr />
+        <p>&copy; @DateTime.Now.Year - Ejercicio Supermercado</p>
+    </footer>
+</body>
+</html>

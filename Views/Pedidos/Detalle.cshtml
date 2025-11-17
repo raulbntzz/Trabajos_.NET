@@ -1,0 +1,60 @@
+﻿@model EjercicioSupermercado.Models.Pedido
+
+@{
+    ViewData["Title"] = "Detalle del pedido";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@if (Model == null)
+{
+    <p>No se encontró el pedido solicitado.</p>
+}
+else
+{
+    <h2>Pedido Nº @Model.IdPedido</h2>
+
+    <h3>Cliente</h3>
+    <p><strong>ID:</strong> @Model.Cliente?.IdCliente</p>
+    <p><strong>Compañía:</strong> @Model.Cliente?.Cia</p>
+    <p><strong>Contacto:</strong> @Model.Cliente?.Contacto</p>
+
+    <h3>Fechas</h3>
+    <p><strong>Pedido:</strong> @Model.FechaPedido.ToShortDateString()</p>
+    <p><strong>Entrega:</strong> @Model.FechaEntrega.ToShortDateString()</p>
+
+    <h3>Productos del Pedido</h3>
+    @if (Model.Detalles == null || !Model.Detalles.Any())
+    {
+        <p>No hay productos asociados a este pedido.</p>
+    }
+    else
+    {
+        <table>
+            <thead>
+                <tr>
+                    <th>ID Producto</th>
+                    <th>Nombre</th>
+                    <th>Categoría</th>
+                    <th>Precio</th>
+                    <th>Unidades</th>
+                    <th>Descuento</th>
+                    <th>Total</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var d in Model.Detalles)
+                {
+                    <tr>
+                        <td>@d.IdProducto</td>
+                        <td>@d.Producto?.Nombre</td>
+                        <td>@d.Producto?.Categoria?</td>
+                        <td>@d.Precio</td>
+                        <td>@d.Unidades</td>
+                        <td>@(d.Descuento * 100)%</td>
+                        <td>@((d.Precio * d.Unidades) * (1 - d.Descuento))</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    }
+}
