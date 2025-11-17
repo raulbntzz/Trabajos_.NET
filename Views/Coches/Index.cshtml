@@ -1,0 +1,45 @@
+﻿@using Taller_AE4.Models.Entity
+@model IEnumerable<Taller_AE4.Models.Entity.Coches>
+@{
+    Layout = "_Layout";
+    var coches = ViewBag.Coches as List<Coches>;
+    ViewData["Title"] = "Coches";
+}
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8" />
+    <title>Listado de coches</title>
+    <link rel="stylesheet" href="~/css/site.css" />
+</head>
+<body>
+    <div class="table-container">
+        <h2>Listado de coches</h2>
+
+        <table class="table table-striped table-bordered">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Modelo</th>
+                    <th>Año</th>
+                    <th>Color</th>
+                    <th>Marca</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var c in Model)
+                {
+                    <tr>
+                        <td>@c.id</td>
+                        <td>@c.modelo</td>
+                        <td>@c.ano</td>
+                        <td>@c.color</td>
+                        <td>@c.marca?.nombre</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>

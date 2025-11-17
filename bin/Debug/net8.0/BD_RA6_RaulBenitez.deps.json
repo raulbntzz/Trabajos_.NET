@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v8.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v8.0": {
+      "BD_RA6_RaulBenitez/1.0.0": {
+        "runtime": {
+          "BD_RA6_RaulBenitez.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "BD_RA6_RaulBenitez/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
