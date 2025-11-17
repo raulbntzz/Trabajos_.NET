@@ -1,0 +1,36 @@
+﻿@{
+    ViewData["Title"] = "Calculadora de Alquiler";
+    Layout = "/Views/Compartido/encabezado.cshtml";
+}
+
+<form method="post" class="formulario">
+    <div>
+        <label for="zona">Zona:</label>
+        <select name="zona" class="form-control">
+            <option value="Getafe">Getafe</option>
+            <option value="Fuenlabrada">Fuenlabrada</option>
+            <option value="Móstoles">Móstoles</option>
+            <option value="Alcorcón">Alcorcón</option>
+        </select>
+    </div>
+
+    <div>
+        <label for="metros">Metros cuadrados:</label>
+        <input name="metros" type="number" class="form-control" />
+    </div>
+
+    <div>
+        <label>
+            <input name="piscina" type="checkbox" value="true"/> ¿Tiene piscina?
+        </label>
+    </div>
+
+    <button type="submit" class="btn">Calcular</button>
+
+    <div>
+        @if (ViewBag.Precio != null)
+        {
+            <h3>Precio estimado: @ViewBag.Precio €</h3>
+        }
+    </div>
+</form>
