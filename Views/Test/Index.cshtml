@@ -1,0 +1,144 @@
+﻿@using ProyectoRaulBenitezOscarSaez.Models
+@model List<PreguntaGlobal>
+
+@{
+    ViewData["Title"] = "Test";
+}
+
+<div class="hero" style="padding: 2rem;">
+    <h1 style="font-size: 2.5rem;">
+        <i class="fas fa-clipboard-check"></i>
+        Test de Conocimientos
+    </h1>
+    
+    @if (ViewBag.UltimaFecha != null)
+    {
+        <div class="alert alert-info">
+            <i class="fas fa-calendar-alt"></i>
+            <strong>Última vez que realizaste el test:</strong> @ViewBag.UltimaFecha
+        </div>
+    }
+</div>
+
+@{
+    var sesion = ViewBag.TestSesion as List<PreguntaSesion>;
+    int questionNumber = 1;
+}
+
+<div class="test-container">
+    @foreach (var p in Model)
+    {
+        var s = sesion.First(x => x.Id == p.Id);
+
+        <div class="question-card">
+            <h3>
+                <span style="background: var(--primary-color); color: white; width: 35px; height: 35px; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; font-size: 1rem;">
+                    @questionNumber
+                </span>
+                @p.Enunciado
+            </h3>
+
+            <form method="post" action="/Test/Responder">
+                <input type="hidden" name="id" value="@p.Id" />
+
+                @for (int i = 0; i < p.Respuestas.Count; i++)
+                {
+                    var isSelected = s.UltimaRespuesta == i;
+                    var isCorrect = i == p.Correcta;
+                    var showResult = s.UltimaRespuesta != null;
+                    
+                    var styleClass = "";
+                    if (showResult && isSelected && isCorrect)
+                    {
+                        styleClass = "border-color: var(--success-color); background: #dcfce7;";
+                    }
+                    else if (showResult && isSelected && !isCorrect)
+                    {
+                        styleClass = "border-color: var(--danger-color); background: #fee2e2;";
+                    }
+
+                    <div class="answer-option" style="@styleClass">
+                        <input type="radio" 
+                               name="respuesta" 
+                               value="@i" 
+                               id="q@(p.Id)_r@(i)"
+                               @(isSelected ? "checked" : "")
+                               @(showResult ? "disabled" : "") />
+                        <label for="q@(p.Id)_r@(i)">
+                            @p.Respuestas[i]
+                            @if (showResult && isSelected && isCorrect)
+                            {
+                                <i class="fas fa-check-circle" style="color: var(--success-color); margin-left: 0.5rem;"></i>
+                            }
+                            else if (showResult && isSelected && !isCorrect)
+                            {
+                                <i class="fas fa-times-circle" style="color: var(--danger-color); margin-left: 0.5rem;"></i>
+                            }
+                        </label>
+                    </div>
+                }
+
+                @if (s.UltimaRespuesta == null)
+                {
+                    <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 1rem;">
+                        <i class="fas fa-paper-plane"></i>
+                        Responder
+                    </button>
+                }
+            </form>
+
+            <div class="stats">
+                <div class="stat-item">
+                    <span class="stat-label">
+                        <i class="fas fa-redo"></i> Intentos
+                    </span>
+                    <span class="stat-value">@s.Intentos</span>
+                </div>
+
+                <div class="stat-item">
+                    <span class="stat-label">
+                        <i class="fas fa-globe"></i> Aciertos Globales
+                    </span>
+                    <span class="stat-value" style="color: var(--success-color);">@p.AciertosGlobales</span>
+                </div>
+
+                @if (s.UltimaRespuesta != null)
+                {
+                    <div class="stat-item">
+                        <span class="stat-label">Estado</span>
+                        @if (s.UltimaRespuesta == p.Correcta)
+                        {
+                            <span class="badge badge-success">
+                                <i class="fas fa-check"></i> Correcto
+                            </span>
+                        }
+                        else
+                        {
+                            <span class="badge badge-danger">
+                                <i class="fas fa-times"></i> Incorrecto
+                            </span>
+                        }
+                    </div>
+                }
+            </div>
+        </div>
+
+        questionNumber++;
+    }
+</div>
+
+<div class="footer-actions">
+    <h3 style="margin-bottom: 1rem; color: var(--dark);">
+        <i class="fas fa-flag-checkered"></i>
+        ¿Terminaste el test?
+    </h3>
+    <p style="color: var(--gray); margin-bottom: 1.5rem;">
+        Al finalizar, guardaremos la fecha de tu último intento.
+    </p>
+    <form method="post" action="/Test/Finalizar" style="display: inline;">
+        <button class="btn btn-success">
+            <i class="fas fa-check-double"></i>
+            Finalizar Test
+        </button>
+    </form>
+</div>

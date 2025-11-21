@@ -1,0 +1,57 @@
+﻿@{
+    ViewData["Title"] = "Inicio";
+}
+
+<div class="hero">
+    <h1>
+        <i class="fas fa-rocket"></i>
+        Bienvenido al Test Interactivo
+    </h1>
+    <p>
+        Pon a prueba tus conocimientos con nuestro sistema de preguntas y respuestas. 
+        Compite con otros usuarios y consulta tus estadísticas.
+    </p>
+    <div class="hero-buttons">
+        <a href="/Test/Index" class="btn btn-primary">
+            <i class="fas fa-play"></i>
+            Comenzar Test
+        </a>
+        <a href="#features" class="btn btn-secondary">
+            <i class="fas fa-info-circle"></i>
+            Más Información
+        </a>
+    </div>
+</div>
+
+<div id="features" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; margin-top: 3rem;">
+    <div class="question-card text-center">
+        <div style="font-size: 3rem; color: var(--accent-color); margin-bottom: 1rem;">
+            <i class="fas fa-brain"></i>
+        </div>
+        <h3 style="justify-content: center;">Preguntas Dinámicas</h3>
+        <p style="color: var(--gray);">
+            Responde preguntas de diferentes categorías y niveles de dificultad.
+        </p>
+    </div>
+
+    <div class="question-card text-center">
+        <div style="font-size: 3rem; color: var(--secondary-color); margin-bottom: 1rem;">
+            <i class="fas fa-chart-line"></i>
+        </div>
+        <h3 style="justify-content: center;">Estadísticas Globales</h3>
+        <p style="color: var(--gray);">
+            Consulta cuántos usuarios han acertado cada pregunta.
+        </p>
+    </div>
+
+    <div class="question-card text-center">
+        <div style="font-size: 3rem; color: var(--warning-color); margin-bottom: 1rem;">
+            <i class="fas fa-trophy"></i>
+        </div>
+        <h3 style="justify-content: center;">Tracking Personal</h3>
+        <p style="color: var(--gray);">
+            Mantén un registro de tus intentos y mejora continuamente.
+        </p>
+    </div>
+</div>
+
