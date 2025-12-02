@@ -1,0 +1,16 @@
+﻿@using System.Security.Claims
+@{
+    ViewData["Title"] = "Perfil";
+}
+
+<h2>Perfil del usuario</h2>
+
+<p>Usuario: @User.Identity!.Name</p>
+
+<p><strong>Nombre:</strong> @User.FindFirst(ClaimTypes.GivenName)?.Value</p>
+<p><strong>Apellidos:</strong> @User.FindFirst(ClaimTypes.Surname)?.Value</p>
+<p><strong>Email:</strong> @User.FindFirst(ClaimTypes.Email)?.Value</p>
+<p><strong>Fecha de nacimiento:</strong> @User.FindFirst(ClaimTypes.DateOfBirth)?.Value</p>
+<p><strong>Teléfono:</strong> @User.FindFirst(ClaimTypes.MobilePhone)?.Value</p>
+<p><strong>Rol:</strong> @User.FindFirst(ClaimTypes.Role)?.Value</p>
+<p><strong>ID:</strong> @User.FindFirst(ClaimTypes.NameIdentifier)?.Value</p>

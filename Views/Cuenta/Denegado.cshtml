@@ -1,0 +1,32 @@
+﻿@{
+    ViewData["Title"] = "Acceso denegado";
+}
+
+<div style="margin-top:50px; text-align:center;">
+    <h2 style="color:#b30000;">Acceso denegado</h2>
+    <p>No tienes permisos para acceder a esta página.</p>
+
+    @if (User.Identity != null && User.Identity.IsAuthenticated)
+    {
+        <p>Estás autenticado como: <strong>@User.Identity.Name</strong></p>
+        <p>Tu rol actual no tiene permisos para acceder a este recurso.</p>
+    }
+    else
+    {
+        <p>Debes iniciar sesión para acceder a este recurso.</p>
+        <a asp-controller="Cuenta" asp-action="Login" 
+           style="margin-top:20px; display:inline-block; 
+                  padding:8px 16px; background:#28a745; color:white; 
+                  border-radius:6px; text-decoration:none;">
+            Iniciar sesión
+        </a>
+    }
+
+    <br />
+    <a asp-controller="Home" asp-action="Index" 
+       style="margin-top:20px; display:inline-block; 
+              padding:8px 16px; background:#007bff; color:white; 
+              border-radius:6px; text-decoration:none;">
+        Volver al inicio
+    </a>
+</div>

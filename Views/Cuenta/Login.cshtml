@@ -1,0 +1,31 @@
+﻿@{
+    ViewData["Title"] = "Login";
+}
+
+<h2>Login</h2>
+
+<form method="post">
+    <div class="mb-3">
+        <label>Usuario</label>
+        <input type="text" name="usuario" class="form-control" required />
+    </div>
+
+    <div class="mb-3">
+        <label>Contraseña</label>
+        <input type="password" name="password" class="form-control" required />
+    </div>
+
+    <button class="btn btn-primary">Entrar</button>
+
+    @if (ViewBag.Error != null)
+    {
+        <div class="alert alert-danger mt-3">@ViewBag.Error</div>
+    }
+</form>
+
+<div class="alert alert-info mt-4">
+    <h5>Usuarios:</h5>
+    <p><strong>Usuario:</strong> admin | <strong>Contraseña:</strong> 1234</p>
+    <p><strong>Usuario:</strong> profe | <strong>Contraseña:</strong> 1234</p>
+    <p><strong>Usuario:</strong> alumno | <strong>Contraseña:</strong> 1234</p>
+</div>
