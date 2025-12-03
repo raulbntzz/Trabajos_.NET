@@ -1,0 +1,14 @@
+C:\Users\CampusFP\Desktop\DWES\NET\trabajo\FicherosAleatorios\bin\Debug\net8.0\FicherosAleatorios.exe
+C:\Users\CampusFP\Desktop\DWES\NET\trabajo\FicherosAleatorios\bin\Debug\net8.0\FicherosAleatorios.deps.json
+C:\Users\CampusFP\Desktop\DWES\NET\trabajo\FicherosAleatorios\bin\Debug\net8.0\FicherosAleatorios.runtimeconfig.json
+C:\Users\CampusFP\Desktop\DWES\NET\trabajo\FicherosAleatorios\bin\Debug\net8.0\FicherosAleatorios.dll
+C:\Users\CampusFP\Desktop\DWES\NET\trabajo\FicherosAleatorios\bin\Debug\net8.0\FicherosAleatorios.pdb
+C:\Users\CampusFP\Desktop\DWES\NET\trabajo\FicherosAleatorios\obj\Debug\net8.0\FicherosAleatorios.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\CampusFP\Desktop\DWES\NET\trabajo\FicherosAleatorios\obj\Debug\net8.0\FicherosAleatorios.AssemblyInfoInputs.cache
+C:\Users\CampusFP\Desktop\DWES\NET\trabajo\FicherosAleatorios\obj\Debug\net8.0\FicherosAleatorios.AssemblyInfo.cs
+C:\Users\CampusFP\Desktop\DWES\NET\trabajo\FicherosAleatorios\obj\Debug\net8.0\FicherosAleatorios.csproj.CoreCompileInputs.cache
+C:\Users\CampusFP\Desktop\DWES\NET\trabajo\FicherosAleatorios\obj\Debug\net8.0\FicherosAleatorios.dll
+C:\Users\CampusFP\Desktop\DWES\NET\trabajo\FicherosAleatorios\obj\Debug\net8.0\refint\FicherosAleatorios.dll
+C:\Users\CampusFP\Desktop\DWES\NET\trabajo\FicherosAleatorios\obj\Debug\net8.0\FicherosAleatorios.pdb
+C:\Users\CampusFP\Desktop\DWES\NET\trabajo\FicherosAleatorios\obj\Debug\net8.0\FicherosAleatorios.genruntimeconfig.cache
+C:\Users\CampusFP\Desktop\DWES\NET\trabajo\FicherosAleatorios\obj\Debug\net8.0\ref\FicherosAleatorios.dll
