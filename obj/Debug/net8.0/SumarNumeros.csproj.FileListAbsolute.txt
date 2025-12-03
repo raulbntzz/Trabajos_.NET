@@ -1,0 +1,14 @@
+C:\Users\CampusFP\Desktop\DWES\NET\trabajo\SumarNumeros\bin\Debug\net8.0\SumarNumeros.exe
+C:\Users\CampusFP\Desktop\DWES\NET\trabajo\SumarNumeros\bin\Debug\net8.0\SumarNumeros.deps.json
+C:\Users\CampusFP\Desktop\DWES\NET\trabajo\SumarNumeros\bin\Debug\net8.0\SumarNumeros.runtimeconfig.json
+C:\Users\CampusFP\Desktop\DWES\NET\trabajo\SumarNumeros\bin\Debug\net8.0\SumarNumeros.dll
+C:\Users\CampusFP\Desktop\DWES\NET\trabajo\SumarNumeros\bin\Debug\net8.0\SumarNumeros.pdb
+C:\Users\CampusFP\Desktop\DWES\NET\trabajo\SumarNumeros\obj\Debug\net8.0\SumarNumeros.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\CampusFP\Desktop\DWES\NET\trabajo\SumarNumeros\obj\Debug\net8.0\SumarNumeros.AssemblyInfoInputs.cache
+C:\Users\CampusFP\Desktop\DWES\NET\trabajo\SumarNumeros\obj\Debug\net8.0\SumarNumeros.AssemblyInfo.cs
+C:\Users\CampusFP\Desktop\DWES\NET\trabajo\SumarNumeros\obj\Debug\net8.0\SumarNumeros.csproj.CoreCompileInputs.cache
+C:\Users\CampusFP\Desktop\DWES\NET\trabajo\SumarNumeros\obj\Debug\net8.0\SumarNumeros.dll
+C:\Users\CampusFP\Desktop\DWES\NET\trabajo\SumarNumeros\obj\Debug\net8.0\refint\SumarNumeros.dll
+C:\Users\CampusFP\Desktop\DWES\NET\trabajo\SumarNumeros\obj\Debug\net8.0\SumarNumeros.pdb
+C:\Users\CampusFP\Desktop\DWES\NET\trabajo\SumarNumeros\obj\Debug\net8.0\SumarNumeros.genruntimeconfig.cache
+C:\Users\CampusFP\Desktop\DWES\NET\trabajo\SumarNumeros\obj\Debug\net8.0\ref\SumarNumeros.dll
