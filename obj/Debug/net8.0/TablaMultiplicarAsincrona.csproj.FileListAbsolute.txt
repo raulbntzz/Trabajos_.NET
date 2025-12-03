@@ -1,0 +1,14 @@
+C:\Users\CampusFP\Desktop\DWES\NET\trabajo\TablaMultiplicarAsincrona\bin\Debug\net8.0\TablaMultiplicarAsincrona.exe
+C:\Users\CampusFP\Desktop\DWES\NET\trabajo\TablaMultiplicarAsincrona\bin\Debug\net8.0\TablaMultiplicarAsincrona.deps.json
+C:\Users\CampusFP\Desktop\DWES\NET\trabajo\TablaMultiplicarAsincrona\bin\Debug\net8.0\TablaMultiplicarAsincrona.runtimeconfig.json
+C:\Users\CampusFP\Desktop\DWES\NET\trabajo\TablaMultiplicarAsincrona\bin\Debug\net8.0\TablaMultiplicarAsincrona.dll
+C:\Users\CampusFP\Desktop\DWES\NET\trabajo\TablaMultiplicarAsincrona\bin\Debug\net8.0\TablaMultiplicarAsincrona.pdb
+C:\Users\CampusFP\Desktop\DWES\NET\trabajo\TablaMultiplicarAsincrona\obj\Debug\net8.0\TablaMultiplicarAsincrona.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\CampusFP\Desktop\DWES\NET\trabajo\TablaMultiplicarAsincrona\obj\Debug\net8.0\TablaMultiplicarAsincrona.AssemblyInfoInputs.cache
+C:\Users\CampusFP\Desktop\DWES\NET\trabajo\TablaMultiplicarAsincrona\obj\Debug\net8.0\TablaMultiplicarAsincrona.AssemblyInfo.cs
+C:\Users\CampusFP\Desktop\DWES\NET\trabajo\TablaMultiplicarAsincrona\obj\Debug\net8.0\TablaMultiplicarAsincrona.csproj.CoreCompileInputs.cache
+C:\Users\CampusFP\Desktop\DWES\NET\trabajo\TablaMultiplicarAsincrona\obj\Debug\net8.0\TablaMultiplicarAsincrona.dll
+C:\Users\CampusFP\Desktop\DWES\NET\trabajo\TablaMultiplicarAsincrona\obj\Debug\net8.0\refint\TablaMultiplicarAsincrona.dll
+C:\Users\CampusFP\Desktop\DWES\NET\trabajo\TablaMultiplicarAsincrona\obj\Debug\net8.0\TablaMultiplicarAsincrona.pdb
+C:\Users\CampusFP\Desktop\DWES\NET\trabajo\TablaMultiplicarAsincrona\obj\Debug\net8.0\TablaMultiplicarAsincrona.genruntimeconfig.cache
+C:\Users\CampusFP\Desktop\DWES\NET\trabajo\TablaMultiplicarAsincrona\obj\Debug\net8.0\ref\TablaMultiplicarAsincrona.dll
