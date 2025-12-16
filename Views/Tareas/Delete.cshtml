@@ -1,0 +1,70 @@
+@model IdentityDemo.DTOs.TareaDto
+
+@{
+    ViewData["Title"] = "Eliminar tarea";
+}
+
+<div class="row justify-content-center">
+    <div class="col-md-8">
+        <div class="card">
+            <div class="card-header">
+                <h3>Confirmar eliminación</h3>
+            </div>
+            <div class="card-body">
+                <div class="alert alert-warning" role="alert">
+                    ¿Estás seguro de que deseas eliminar esta tarea? Esta acción no se puede deshacer.
+                </div>
+
+                <dl class="row">
+                    <dt class="col-sm-3">Título:</dt>
+                    <dd class="col-sm-9"><strong>@Model.Titulo</strong></dd>
+
+                    <dt class="col-sm-3">Descripción:</dt>
+                    <dd class="col-sm-9">
+                        @if (!string.IsNullOrEmpty(Model.Descripcion))
+                        {
+                            @Model.Descripcion
+                        }
+                        else
+                        {
+                            <span class="text-muted">Sin descripción</span>
+                        }
+                    </dd>
+
+                    <dt class="col-sm-3">Estado:</dt>
+                    <dd class="col-sm-9">
+                        @if (Model.Estado == "Pendiente")
+                        {
+                            <span class="badge bg-warning">Pendiente</span>
+                        }
+                        else if (Model.Estado == "EnProceso")
+                        {
+                            <span class="badge bg-primary">En Proceso</span>
+                        }
+                        else if (Model.Estado == "Completada")
+                        {
+                            <span class="badge bg-success">Completada</span>
+                        }
+                    </dd>
+
+                    <dt class="col-sm-3">Fecha creación:</dt>
+                    <dd class="col-sm-9">@Model.FechaCreacion.ToString("dd/MM/yyyy HH:mm")</dd>
+
+                    @if (Model.FechaCompletada.HasValue)
+                    {
+                        <dt class="col-sm-3">Fecha completada:</dt>
+                        <dd class="col-sm-9">@Model.FechaCompletada.Value.ToString("dd/MM/yyyy HH:mm")</dd>
+                    }
+                </dl>
+
+                <form asp-action="Delete" method="post">
+                    <input type="hidden" asp-for="Id" />
+                    <div class="d-flex justify-content-end gap-2">
+                        <a asp-action="Index" class="btn btn-secondary">Cancelar</a>
+                        <button type="submit" class="btn btn-danger">Eliminar</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

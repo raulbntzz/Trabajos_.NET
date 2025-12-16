@@ -1,0 +1,352 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 60px;
+  background-color: #ffffff;
+  color: #1a1a1a;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+}
+
+/* Navbar minimalista */
+.navbar {
+  background-color: #ffffff !important;
+  border-bottom: 1px solid #e0e0e0;
+  box-shadow: none;
+}
+
+.navbar-brand {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #1a1a1a !important;
+}
+
+.nav-link {
+  color: #666666 !important;
+  font-weight: 400;
+  transition: color 0.2s;
+}
+
+.nav-link:hover {
+  color: #1a1a1a !important;
+}
+
+/* Cards minimalistas */
+.card {
+  border: 1px solid #e0e0e0;
+  border-radius: 0;
+  background-color: #ffffff;
+  box-shadow: none;
+  margin-bottom: 20px;
+}
+
+.card-header {
+  background-color: #f5f5f5;
+  border-bottom: 1px solid #e0e0e0;
+  border-radius: 0;
+  font-weight: 600;
+  color: #1a1a1a;
+  padding: 1rem 1.25rem;
+}
+
+.card-body {
+  padding: 1.5rem;
+}
+
+/* Botones minimalistas */
+.btn {
+  border-radius: 0;
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+  border: 1px solid #1a1a1a;
+  transition: all 0.2s;
+}
+
+.btn-primary {
+  background-color: #1a1a1a;
+  border-color: #1a1a1a;
+  color: #ffffff;
+}
+
+.btn-primary:hover {
+  background-color: #333333;
+  border-color: #333333;
+}
+
+.btn-secondary {
+  background-color: #ffffff;
+  border-color: #666666;
+  color: #666666;
+}
+
+.btn-secondary:hover {
+  background-color: #f5f5f5;
+  border-color: #1a1a1a;
+  color: #1a1a1a;
+}
+
+.btn-success {
+  background-color: #1a1a1a;
+  border-color: #1a1a1a;
+  color: #ffffff;
+}
+
+.btn-success:hover {
+  background-color: #333333;
+  border-color: #333333;
+}
+
+.btn-danger {
+  background-color: #1a1a1a;
+  border-color: #1a1a1a;
+  color: #ffffff;
+}
+
+.btn-danger:hover {
+  background-color: #333333;
+  border-color: #333333;
+}
+
+.btn-outline-primary,
+.btn-outline-danger {
+  background-color: #ffffff;
+  border-color: #e0e0e0;
+  color: #666666;
+}
+
+.btn-outline-primary:hover,
+.btn-outline-danger:hover {
+  background-color: #f5f5f5;
+  border-color: #1a1a1a;
+  color: #1a1a1a;
+}
+
+/* Badges minimalistas */
+.badge {
+  padding: 0.35em 0.65em;
+  font-weight: 500;
+  border-radius: 0;
+  border: 1px solid;
+}
+
+/* Badge para estado Pendiente - Amarillo */
+.badge.bg-warning {
+  background-color: #ffc107 !important;
+  color: #1a1a1a;
+  border-color: #ffc107;
+}
+
+/* Badge para estado En Proceso - Azul */
+.badge.bg-primary {
+  background-color: #0d6efd !important;
+  color: #ffffff;
+  border-color: #0d6efd;
+}
+
+/* Badge para estado Completada - Verde */
+.badge.bg-success {
+  background-color: #198754 !important;
+  color: #ffffff;
+  border-color: #198754;
+}
+
+/* Badge genérico secundario - Gris */
+.badge.bg-secondary {
+  background-color: #6c757d !important;
+  color: #ffffff;
+  border-color: #6c757d;
+}
+
+/* Badge de peligro - Rojo */
+.badge.bg-danger {
+  background-color: #dc3545 !important;
+  color: #ffffff;
+  border-color: #dc3545;
+}
+
+/* Badge de info - Cyan */
+.badge.bg-info {
+  background-color: #0dcaf0 !important;
+  color: #1a1a1a;
+  border-color: #0dcaf0;
+}
+
+/* Tables minimalistas */
+.table {
+  border: 1px solid #e0e0e0;
+}
+
+.table thead {
+  background-color: #f5f5f5;
+  border-bottom: 2px solid #e0e0e0;
+}
+
+.table th {
+  color: #1a1a1a;
+  font-weight: 600;
+  border: none;
+}
+
+.table td {
+  color: #666666;
+  border-color: #e0e0e0;
+}
+
+.table-hover tbody tr:hover {
+  background-color: #f9f9f9;
+}
+
+/* Forms minimalistas */
+.form-control,
+.form-select {
+  border-radius: 0;
+  border: 1px solid #cccccc;
+  color: #1a1a1a;
+}
+
+.form-control:focus,
+.form-select:focus {
+  border-color: #1a1a1a;
+  box-shadow: none;
+}
+
+.form-label {
+  color: #1a1a1a;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+}
+
+/* Alerts minimalistas */
+.alert {
+  border-radius: 0;
+  border: 1px solid;
+}
+
+.alert-info {
+  background-color: #f5f5f5;
+  border-color: #cccccc;
+  color: #1a1a1a;
+}
+
+.alert-success {
+  background-color: #f5f5f5;
+  border-color: #1a1a1a;
+  color: #1a1a1a;
+}
+
+.alert-danger {
+  background-color: #f5f5f5;
+  border-color: #666666;
+  color: #1a1a1a;
+}
+
+.alert-warning {
+  background-color: #f9f9f9;
+  border-color: #cccccc;
+  color: #1a1a1a;
+}
+
+/* Tabs minimalistas */
+.nav-tabs {
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.nav-tabs .nav-link {
+  border: none;
+  border-bottom: 2px solid transparent;
+  color: #666666;
+  font-weight: 500;
+  border-radius: 0;
+  padding: 0.75rem 1rem;
+}
+
+.nav-tabs .nav-link:hover {
+  border-color: transparent;
+  border-bottom-color: #cccccc;
+  color: #1a1a1a;
+}
+
+.nav-tabs .nav-link.active {
+  background-color: transparent;
+  color: #1a1a1a;
+  border-color: transparent;
+  border-bottom-color: #1a1a1a;
+  font-weight: 600;
+}
+
+/* Footer minimalista */
+.footer {
+  background-color: #ffffff;
+  border-top: 1px solid #e0e0e0;
+  padding: 20px 0;
+  color: #666666;
+}
+
+.footer a {
+  color: #666666;
+  text-decoration: none;
+}
+
+.footer a:hover {
+  color: #1a1a1a;
+}
+
+/* Dropdown minimalista */
+.dropdown-menu {
+  border-radius: 0;
+  border: 1px solid #e0e0e0;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.dropdown-item {
+  color: #666666;
+}
+
+.dropdown-item:hover {
+  background-color: #f5f5f5;
+  color: #1a1a1a;
+}
+
+.dropdown-divider {
+  border-color: #e0e0e0;
+}
+
+/* Eliminar animaciones */
+.card,
+.btn,
+* {
+  transition: none !important;
+}
+
+/* Enlaces */
+a {
+  color: #1a1a1a;
+  text-decoration: underline;
+}
+
+a:hover {
+  color: #666666;
+}
+
+/* Títulos */
+h1, h2, h3, h4, h5, h6 {
+  color: #1a1a1a;
+  font-weight: 600;
+}
+
+/* Texto muted */
+.text-muted {
+  color: #999999 !important;
+}

@@ -1,0 +1,70 @@
+@model IEnumerable<IdentityDemo.DTOs.TareaDto>
+
+<div class="table-responsive">
+    <table class="table table-hover">
+        <thead>
+            <tr>
+                <th>Título</th>
+                <th>Descripción</th>
+                <th>Estado</th>
+                <th>Fecha creación</th>
+                <th>Fecha completada</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var tarea in Model)
+            {
+                <tr>
+                    <td><strong>@tarea.Titulo</strong></td>
+                    <td>
+                        @if (!string.IsNullOrEmpty(tarea.Descripcion))
+                        {
+                            if (tarea.Descripcion.Length > 50)
+                            {
+                                @(tarea.Descripcion.Substring(0, 50) + "...")
+                            }
+                            else
+                            {
+                                @tarea.Descripcion
+                            }
+                        }
+                        else
+                        {
+                            <span class="text-muted">—</span>
+                        }
+                    </td>
+                    <td>
+                        @if (tarea.Estado == "Pendiente")
+                        {
+                            <span class="badge bg-warning">Pendiente</span>
+                        }
+                        else if (tarea.Estado == "EnProceso")
+                        {
+                            <span class="badge bg-primary">En Proceso</span>
+                        }
+                        else if (tarea.Estado == "Completada")
+                        {
+                            <span class="badge bg-success">Completada</span>
+                        }
+                    </td>
+                    <td>@tarea.FechaCreacion.ToString("dd/MM/yyyy HH:mm")</td>
+                    <td>
+                        @if (tarea.FechaCompletada.HasValue)
+                        {
+                            @tarea.FechaCompletada.Value.ToString("dd/MM/yyyy HH:mm")
+                        }
+                        else
+                        {
+                            <span class="text-muted">—</span>
+                        }
+                    </td>
+                    <td>
+                        <a asp-action="Edit" asp-route-id="@tarea.Id" class="btn btn-sm btn-outline-primary">Editar</a>
+                        <a asp-action="Delete" asp-route-id="@tarea.Id" class="btn btn-sm btn-outline-danger">Eliminar</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

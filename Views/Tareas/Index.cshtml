@@ -1,0 +1,81 @@
+﻿@model IEnumerable<IdentityDemo.DTOs.TareaDto>
+
+@{
+    ViewData["Title"] = "Mis tareas";
+    var tareasPendientes = Model.Where(t => t.Estado == "Pendiente").ToList();
+    var tareasEnProceso = Model.Where(t => t.Estado == "EnProceso").ToList();
+    var tareasCompletadas = Model.Where(t => t.Estado == "Completada").ToList();
+}
+
+<div class="d-flex justify-content-between align-items-center mb-4">
+    <h2>Tareas</h2>
+    <a asp-action="Create" class="btn btn-primary">Nueva tarea</a>
+</div>
+
+@if (!Model.Any())
+{
+    <div class="alert alert-info">
+        No tienes tareas registradas. <a asp-action="Create">Crea tu primera tarea</a>
+    </div>
+}
+else
+{
+    <ul class="nav nav-tabs mb-3" id="tareasTab" role="tablist">
+        <li class="nav-item" role="presentation">
+            <button class="nav-link active" id="todas-tab" data-bs-toggle="tab" data-bs-target="#todas" type="button">
+                Todas (@Model.Count())
+            </button>
+        </li>
+        <li class="nav-item" role="presentation">
+            <button class="nav-link" id="pendientes-tab" data-bs-toggle="tab" data-bs-target="#pendientes" type="button">
+                Pendientes (@tareasPendientes.Count)
+            </button>
+        </li>
+        <li class="nav-item" role="presentation">
+            <button class="nav-link" id="enproceso-tab" data-bs-toggle="tab" data-bs-target="#enproceso" type="button">
+                En Proceso (@tareasEnProceso.Count)
+            </button>
+        </li>
+        <li class="nav-item" role="presentation">
+            <button class="nav-link" id="completadas-tab" data-bs-toggle="tab" data-bs-target="#completadas" type="button">
+                Completadas (@tareasCompletadas.Count)
+            </button>
+        </li>
+    </ul>
+
+    <div class="tab-content" id="tareasTabContent">
+        <div class="tab-pane fade show active" id="todas">
+            @await Html.PartialAsync("_TareasTable", Model)
+        </div>
+        <div class="tab-pane fade" id="pendientes">
+            @if (tareasPendientes.Any())
+            {
+                @await Html.PartialAsync("_TareasTable", tareasPendientes)
+            }
+            else
+            {
+                <p class="text-muted">No hay tareas pendientes</p>
+            }
+        </div>
+        <div class="tab-pane fade" id="enproceso">
+            @if (tareasEnProceso.Any())
+            {
+                @await Html.PartialAsync("_TareasTable", tareasEnProceso)
+            }
+            else
+            {
+                <p class="text-muted">No hay tareas en proceso</p>
+            }
+        </div>
+        <div class="tab-pane fade" id="completadas">
+            @if (tareasCompletadas.Any())
+            {
+                @await Html.PartialAsync("_TareasTable", tareasCompletadas)
+            }
+            else
+            {
+                <p class="text-muted">No hay tareas completadas</p>
+            }
+        </div>
+    </div>
+}

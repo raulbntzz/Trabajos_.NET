@@ -1,0 +1,127 @@
+@model IEnumerable<IdentityDemo.Models.EstadisticaUsuario>
+
+@{
+    ViewData["Title"] = "Panel de Administración";
+    var totalTareas = Model.Sum(e => e.TotalTareas);
+    var totalPendientes = Model.Sum(e => e.TareasPendientes);
+    var totalEnProceso = Model.Sum(e => e.TareasEnProceso);
+    var totalCompletadas = Model.Sum(e => e.TareasCompletadas);
+}
+
+<div class="mb-4">
+    <h2>Panel de Administración</h2>
+    <p class="text-muted">Vista general del sistema</p>
+</div>
+
+<div class="row mb-4">
+    <div class="col-md-3">
+        <div class="card text-center">
+            <div class="card-body">
+                <h3>@ViewBag.TotalUsuarios</h3>
+                <p class="text-muted mb-0">Usuarios</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-3">
+        <div class="card text-center">
+            <div class="card-body">
+                <h3>@totalTareas</h3>
+                <p class="text-muted mb-0">Tareas totales</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-3">
+        <div class="card text-center">
+            <div class="card-body">
+                <h3>@totalPendientes</h3>
+                <p class="text-muted mb-0">Pendientes</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-3">
+        <div class="card text-center">
+            <div class="card-body">
+                <h3>@totalCompletadas</h3>
+                <p class="text-muted mb-0">Completadas</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="card">
+    <div class="card-header">
+        <h4>Estadísticas por Usuario</h4>
+    </div>
+    <div class="card-body">
+        <div class="table-responsive">
+            <table class="table table-hover">
+                <thead>
+                    <tr>
+                        <th>Email</th>
+                        <th>Roles</th>
+                        <th>Total</th>
+                        <th>Pendientes</th>
+                        <th>En Proceso</th>
+                        <th>Completadas</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var estadistica in Model)
+                    {
+                        <tr>
+                            <td>@estadistica.Email</td>
+                            <td>
+                                @if (estadistica.Roles?.Contains("Admin") == true)
+                                {
+                                    <span class="badge bg-secondary">Admin</span>
+                                }
+                                @if (estadistica.Roles?.Contains("Usuario") == true)
+                                {
+                                    <span class="badge bg-secondary">Usuario</span>
+                                }
+                            </td>
+                            <td><strong>@estadistica.TotalTareas</strong></td>
+                            <td>
+                                @if (estadistica.TareasPendientes > 0)
+                                {
+                                    <span class="badge bg-warning">@estadistica.TareasPendientes</span>
+                                }
+                                else
+                                {
+                                    <span class="text-muted">0</span>
+                                }
+                            </td>
+                            <td>
+                                @if (estadistica.TareasEnProceso > 0)
+                                {
+                                    <span class="badge bg-primary">@estadistica.TareasEnProceso</span>
+                                }
+                                else
+                                {
+                                    <span class="text-muted">0</span>
+                                }
+                            </td>
+                            <td>
+                                @if (estadistica.TareasCompletadas > 0)
+                                {
+                                    <span class="badge bg-success">@estadistica.TareasCompletadas</span>
+                                }
+                                else
+                                {
+                                    <span class="text-muted">0</span>
+                                }
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+@if (!Model.Any())
+{
+    <div class="alert alert-info mt-3">
+        No hay usuarios registrados en el sistema.
+    </div>
+}
