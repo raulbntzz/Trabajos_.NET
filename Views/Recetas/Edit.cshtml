@@ -1,0 +1,44 @@
+@model RecetaDto
+@{
+    ViewData["Title"] = "Editar Receta";
+}
+
+<h2>Editar Receta</h2>
+
+<form asp-action="Edit" method="post">
+    <input type="hidden" asp-for="Id" />
+    <div asp-validation-summary="ModelOnly" class="text-danger mb-3"></div>
+    
+    <div class="mb-3">
+        <label asp-for="Nombre" class="form-label"></label>
+        <input asp-for="Nombre" class="form-control" />
+        <span asp-validation-for="Nombre" class="text-danger"></span>
+    </div>
+    
+    <div class="mb-3">
+        <label asp-for="Preparacion" class="form-label"></label>
+        <textarea asp-for="Preparacion" class="form-control" rows="5"></textarea>
+        <span asp-validation-for="Preparacion" class="text-danger"></span>
+    </div>
+    
+    <div class="row">
+        <div class="col-md-6 mb-3">
+            <label asp-for="TiempoPreparacionMinutos" class="form-label"></label>
+            <input asp-for="TiempoPreparacionMinutos" class="form-control" type="number" />
+            <span asp-validation-for="TiempoPreparacionMinutos" class="text-danger"></span>
+        </div>
+        
+        <div class="col-md-6 mb-3">
+            <label asp-for="Porciones" class="form-label"></label>
+            <input asp-for="Porciones" class="form-control" type="number" />
+            <span asp-validation-for="Porciones" class="text-danger"></span>
+        </div>
+    </div>
+    
+    <button type="submit" class="btn btn-primary">Guardar</button>
+    <a asp-action="Index" class="btn btn-secondary">Cancelar</a>
+</form>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

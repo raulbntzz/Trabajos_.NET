@@ -1,0 +1,10 @@
+/* CSS Mínimo - Solo ajustes estructurales */
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 60px;
+}

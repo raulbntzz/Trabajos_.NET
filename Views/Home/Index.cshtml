@@ -1,0 +1,40 @@
+﻿@{
+    ViewData["Title"] = "Inicio";
+}
+
+<div class="text-center">
+    <h1>Recetas de Cocina</h1>
+    <p class="lead">Gestiona tus recetas e ingredientes</p>
+    
+    @if (User.Identity?.IsAuthenticated ?? false)
+    {
+        <div class="row mt-4">
+            <div class="col-md-6 mb-3">
+                <div class="card">
+                    <div class="card-body">
+                        <h5>Recetas</h5>
+                        <p>Administra tus recetas</p>
+                        <a asp-controller="Recetas" asp-action="Index" class="btn btn-primary">Ver Recetas</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 mb-3">
+                <div class="card">
+                    <div class="card-body">
+                        <h5>Ingredientes</h5>
+                        <p>Administra tus ingredientes</p>
+                        <a asp-controller="Ingredientes" asp-action="Index" class="btn btn-secondary">Ver Ingredientes</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    }
+    else
+    {
+        <div class="mt-4">
+            <p>Inicia sesión para gestionar tus recetas</p>
+            <a asp-controller="Auth" asp-action="Register" class="btn btn-primary me-2">Registrarse</a>
+            <a asp-controller="Auth" asp-action="Login" class="btn btn-outline-primary">Iniciar Sesión</a>
+        </div>
+    }
+</div>

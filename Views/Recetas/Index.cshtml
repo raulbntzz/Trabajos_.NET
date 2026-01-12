@@ -1,0 +1,37 @@
+@model IEnumerable<RecetaDto>
+@{
+    ViewData["Title"] = "Mis Recetas";
+}
+
+<div class="d-flex justify-content-between align-items-center mb-3">
+    <h2>Mis Recetas</h2>
+    <a asp-action="Create" class="btn btn-primary">Nueva Receta</a>
+</div>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Nombre</th>
+            <th>Tiempo (min)</th>
+            <th>Porciones</th>
+            <th>Ingredientes</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var receta in Model)
+        {
+            <tr>
+                <td>@receta.Nombre</td>
+                <td>@receta.TiempoPreparacionMinutos</td>
+                <td>@receta.Porciones</td>
+                <td>@receta.Ingredientes.Count</td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@receta.Id" class="btn btn-sm btn-warning">Editar</a>
+                    <a asp-action="ManageIngredientes" asp-route-id="@receta.Id" class="btn btn-sm btn-secondary">Ingredientes</a>
+                    <a asp-action="Delete" asp-route-id="@receta.Id" class="btn btn-sm btn-danger">Eliminar</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

@@ -1,0 +1,76 @@
+@model RecetaDto
+@{
+    ViewData["Title"] = "Gestionar Ingredientes";
+    var todosIngredientes = ViewBag.TodosIngredientes as IEnumerable<IngredienteDto>;
+}
+
+<h2>Gestionar Ingredientes - @Model.Nombre</h2>
+
+<h4>Ingredientes de la Receta</h4>
+@if (Model.Ingredientes.Any())
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Ingrediente</th>
+                <th>Cantidad</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var ing in Model.Ingredientes)
+            {
+                <tr>
+                    <td>@ing.NombreIngrediente</td>
+                    <td>@ing.Cantidad</td>
+                    <td>
+                        <form asp-action="RemoveIngrediente" method="post" class="d-inline">
+                            <input type="hidden" name="recetaId" value="@Model.Id" />
+                            <input type="hidden" name="ingredienteId" value="@ing.IngredienteId" />
+                            <button type="submit" class="btn btn-sm btn-danger">Eliminar</button>
+                        </form>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+else
+{
+    <p class="text-muted">No hay ingredientes añadidos</p>
+}
+
+<hr />
+
+<h4>Añadir Ingrediente</h4>
+<form asp-action="AddIngrediente" method="post" class="row g-3">
+    <input type="hidden" name="recetaId" value="@Model.Id" />
+    
+    <div class="col-md-5">
+        <label class="form-label">Ingrediente</label>
+        <select name="ingredienteId" class="form-select" required>
+            <option value="">Selecciona un ingrediente</option>
+            @if (todosIngredientes != null)
+            {
+                @foreach (var ing in todosIngredientes)
+                {
+                    <option value="@ing.Id">@ing.Nombre</option>
+                }
+            }
+        </select>
+    </div>
+    
+    <div class="col-md-5">
+        <label class="form-label">Cantidad</label>
+        <input type="text" name="cantidad" class="form-control" placeholder="Ej: 200g, 2 tazas" required />
+    </div>
+    
+    <div class="col-md-2">
+        <label class="form-label">&nbsp;</label>
+        <button type="submit" class="btn btn-primary w-100">Añadir</button>
+    </div>
+</form>
+
+<hr />
+
+<a asp-action="Index" class="btn btn-secondary">Volver</a>

@@ -1,0 +1,23 @@
+@model RecetaDto
+@{
+    ViewData["Title"] = "Eliminar Receta";
+}
+
+<h2>Eliminar Receta</h2>
+
+<dl class="row">
+    <dt class="col-sm-3">Nombre</dt>
+    <dd class="col-sm-9">@Model.Nombre</dd>
+    
+    <dt class="col-sm-3">Tiempo</dt>
+    <dd class="col-sm-9">@Model.TiempoPreparacionMinutos minutos</dd>
+    
+    <dt class="col-sm-3">Porciones</dt>
+    <dd class="col-sm-9">@Model.Porciones</dd>
+</dl>
+
+<form asp-action="Delete" method="post">
+    <input type="hidden" name="id" value="@Model.Id" />
+    <button type="submit" class="btn btn-danger">Eliminar</button>
+    <a asp-action="Index" class="btn btn-secondary">Cancelar</a>
+</form>

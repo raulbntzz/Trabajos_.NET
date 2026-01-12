@@ -1,0 +1,32 @@
+@model IEnumerable<IngredienteDto>
+@{
+    ViewData["Title"] = "Mis Ingredientes";
+}
+
+<div class="d-flex justify-content-between align-items-center mb-3">
+    <h2>Mis Ingredientes</h2>
+    <a asp-action="Create" class="btn btn-primary">Nuevo Ingrediente</a>
+</div>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Nombre</th>
+            <th>Categoría</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var ingrediente in Model)
+        {
+            <tr>
+                <td>@ingrediente.Nombre</td>
+                <td>@ingrediente.Categoria</td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@ingrediente.Id" class="btn btn-sm btn-warning">Editar</a>
+                    <a asp-action="Delete" asp-route-id="@ingrediente.Id" class="btn btn-sm btn-danger">Eliminar</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
