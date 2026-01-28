@@ -1,0 +1,150 @@
+### ==================================
+### API REST - Indicadores EcoData Solutions
+### Ejemplos de peticiones para probar con REST Client
+### ==================================
+
+@AE_RA7_RBM_HostAddress = http://localhost:5211
+@baseUrl = {{AE_RA7_RBM_HostAddress}}/api/indicadores
+
+### 1. Obtener todos los indicadores
+GET {{baseUrl}}
+Accept: application/json
+
+###
+
+### 2. Obtener indicador por ID
+GET {{baseUrl}}/1
+Accept: application/json
+
+###
+
+### 3. FILTRO 1: Obtener indicadores por TIPO (ej: Digitalizacion)
+GET {{baseUrl}}/tipo/Digitalizacion
+Accept: application/json
+
+###
+
+### 3b. FILTRO 1: Obtener indicadores por TIPO (ej: Sostenibilidad)
+GET {{baseUrl}}/tipo/Sostenibilidad
+Accept: application/json
+
+###
+
+### 4. FILTRO 2: Obtener indicadores por ÁMBITO (ej: Empresa)
+GET {{baseUrl}}/ambito/Empresa
+Accept: application/json
+
+###
+
+### 4b. FILTRO 2: Obtener indicadores por ÁMBITO (ej: Dirección)
+GET {{baseUrl}}/ambito/Dirección
+Accept: application/json
+
+###
+
+### 5. CONSULTA AGREGADA (GROUP BY): Total de indicadores por tipo
+GET {{baseUrl}}/total-por-tipo
+Accept: application/json
+
+###
+
+### ==================================
+### OPERACIÓN POST - CREAR
+### ==================================
+
+### 6. Crear un nuevo indicador de Sostenibilidad
+POST {{baseUrl}}
+Content-Type: application/json
+
+{
+  "tipo": "Sostenibilidad",
+  "categoria": "Medio ambiente",
+  "nombre": "Indicador de prueba - API",
+  "descripcion": "Indicador creado desde la API REST para pruebas",
+  "valor": "100",
+  "unidad": "Unidades",
+  "fecha": "2024-05-01T00:00:00",
+  "ambito": "Empresa"
+}
+
+###
+
+### 7. Crear un nuevo indicador de Digitalización
+POST {{baseUrl}}
+Content-Type: application/json
+
+{
+  "tipo": "Digitalizacion",
+  "categoria": "Tecnología",
+  "nombre": "Indicador de prueba - Digitalización",
+  "descripcion": "Indicador de digitalización creado desde la API",
+  "valor": "Si",
+  "unidad": "boolean",
+  "fecha": "2024-05-01T00:00:00",
+  "ambito": "Departamento de Sistemas"
+}
+
+###
+
+### ==================================
+### OPERACIÓN PUT - ACTUALIZAR
+### ==================================
+
+### 8. Actualizar un indicador existente (cambiar ID según necesites)
+PUT {{baseUrl}}/1
+Content-Type: application/json
+
+{
+  "tipo": "Sostenibilidad",
+  "categoria": "Ambiental",
+  "nombre": "Reducción de emisiones CO2 - Actualizado",
+  "descripcion": "Indicador actualizado que mide la reducción de emisiones de CO2",
+  "valor": "200",
+  "unidad": "Toneladas",
+  "fecha": "2024-02-01T00:00:00",
+  "ambito": "Internacional"
+}
+
+###
+
+### ==================================
+### OPERACIÓN DELETE - ELIMINAR
+### ==================================
+
+### 9. Eliminar un indicador (cambiar ID según necesites)
+DELETE {{baseUrl}}/3
+
+###
+
+### ==================================
+### PRUEBAS ADICIONALES
+### ==================================
+
+### 10. Intentar obtener un indicador que no existe (debe devolver 404)
+GET {{baseUrl}}/9999
+Accept: application/json
+
+###
+
+### 11. Intentar actualizar un indicador que no existe (debe devolver 404)
+PUT {{baseUrl}}/9999
+Content-Type: application/json
+
+{
+  "tipo": "Test",
+  "categoria": "Test",
+  "nombre": "Test",
+  "descripcion": "Test",
+  "valor": "0",
+  "unidad": "Test",
+  "fecha": "2024-01-01T00:00:00",
+  "ambito": "Test"
+}
+
+###
+
+### 12. Intentar eliminar un indicador que no existe (debe devolver 404)
+DELETE {{baseUrl}}/9999
+
+###
+

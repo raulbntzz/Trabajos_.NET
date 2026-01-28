@@ -1,0 +1,123 @@
+[
+  {
+    "ContainingType": "AE_RA7_RBM.Controllers.IndicadoresController",
+    "Method": "GetAll",
+    "RelativePath": "api/indicadores",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AE_RA7_RBM.Controllers.IndicadoresController",
+    "Method": "Create",
+    "RelativePath": "api/indicadores",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "indicadorDto",
+        "Type": "AE_RA7_RBM.DTOs.IndicadorDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AE_RA7_RBM.Controllers.IndicadoresController",
+    "Method": "GetById",
+    "RelativePath": "api/indicadores/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AE_RA7_RBM.Controllers.IndicadoresController",
+    "Method": "Update",
+    "RelativePath": "api/indicadores/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "indicadorDto",
+        "Type": "AE_RA7_RBM.DTOs.IndicadorDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AE_RA7_RBM.Controllers.IndicadoresController",
+    "Method": "Delete",
+    "RelativePath": "api/indicadores/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AE_RA7_RBM.Controllers.IndicadoresController",
+    "Method": "GetByAmbito",
+    "RelativePath": "api/indicadores/ambito/{ambito}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "ambito",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AE_RA7_RBM.Controllers.IndicadoresController",
+    "Method": "GetByTipo",
+    "RelativePath": "api/indicadores/tipo/{tipo}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "tipo",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AE_RA7_RBM.Controllers.IndicadoresController",
+    "Method": "GetTotalPorTipo",
+    "RelativePath": "api/indicadores/total-por-tipo",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  }
+]
