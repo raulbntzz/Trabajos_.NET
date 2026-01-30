@@ -32,3 +32,4 @@ C:\Users\CampusFP\Desktop\DWES\NET\Apis\AE_RA9_RBM\obj\Debug\net8.0\refint\AE_RA
 C:\Users\CampusFP\Desktop\DWES\NET\Apis\AE_RA9_RBM\obj\Debug\net8.0\AE_RA9_RBM.pdb
 C:\Users\CampusFP\Desktop\DWES\NET\Apis\AE_RA9_RBM\obj\Debug\net8.0\AE_RA9_RBM.genruntimeconfig.cache
 C:\Users\CampusFP\Desktop\DWES\NET\Apis\AE_RA9_RBM\obj\Debug\net8.0\ref\AE_RA9_RBM.dll
+C:\Users\CampusFP\Desktop\DWES\NET\Apis\AE_RA9_RBM\obj\Debug\net8.0\AE_RA9_RBM.sourcelink.json

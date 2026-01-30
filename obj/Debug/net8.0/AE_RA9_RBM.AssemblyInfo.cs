@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("AE_RA9_RBM")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8f2a186cb73ed94b076b7cf8bc1246761e5797d4")]
 [assembly: System.Reflection.AssemblyProductAttribute("AE_RA9_RBM")]
 [assembly: System.Reflection.AssemblyTitleAttribute("AE_RA9_RBM")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

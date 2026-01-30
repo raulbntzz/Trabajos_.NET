@@ -6,7 +6,7 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllersWithViews();
 
 // Configurar HttpClient para consumir la API REST
-var apiBaseUrl = builder.Configuration["ApiSettings:BaseUrl"] ?? "https://localhost:7183/api";
+var apiBaseUrl = builder.Configuration["ApiSettings:BaseUrl"] ?? "https://localhost:5211/api";
 builder.Services.AddHttpClient<IndicadorApiService>(client =>
 {
     client.BaseAddress = new Uri(apiBaseUrl);
