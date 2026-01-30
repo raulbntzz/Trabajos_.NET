@@ -1,0 +1,127 @@
+@model AE_RA8_RBM.DTOs.IndicadorDto
+
+@{
+    ViewData["Title"] = "Nuevo Indicador";
+}
+
+<div class="container mt-4">
+    <h1>@ViewData["Title"]</h1>
+
+    <div class="card">
+        <div class="card-header bg-primary text-white">
+            <h5 class="mb-0">Formulario de Creación</h5>
+        </div>
+        <div class="card-body">
+            <form asp-action="Create" method="post">
+                <div asp-validation-summary="ModelOnly" class="alert alert-danger"></div>
+
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="mb-3">
+                            <label asp-for="Tipo" class="form-label"></label>
+                            <select asp-for="Tipo" class="form-select">
+                                <option value="Digitalización">Digitalización</option>
+                                <option value="Sostenibilidad">Sostenibilidad</option>
+                            </select>
+                            <span asp-validation-for="Tipo" class="text-danger"></span>
+                            <small class="form-text text-muted">
+                                Digitalización: transformación digital | Sostenibilidad: prácticas sostenibles
+                            </small>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <div class="mb-3">
+                            <label asp-for="Categoria" class="form-label"></label>
+                            <select asp-for="Categoria" class="form-select">
+                                <option value="">-- Seleccione una categoría --</option>
+                                <option value="Procesos">Procesos</option>
+                                <option value="Tecnología">Tecnología</option>
+                                <option value="Datos">Datos</option>
+                                <option value="Energía">Energía</option>
+                                <option value="Medio ambiente">Medio ambiente</option>
+                                <option value="Residuos">Residuos</option>
+                                <option value="Social">Social</option>
+                                <option value="Gobernanza">Gobernanza</option>
+                                <option value="Economía circular">Economía circular</option>
+                            </select>
+                            <span asp-validation-for="Categoria" class="text-danger"></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mb-3">
+                    <label asp-for="Nombre" class="form-label"></label>
+                    <input asp-for="Nombre" class="form-control" placeholder="Ej: Servidores cloud activos" />
+                    <span asp-validation-for="Nombre" class="text-danger"></span>
+                </div>
+
+                <div class="mb-3">
+                    <label asp-for="Descripcion" class="form-label"></label>
+                    <textarea asp-for="Descripcion" class="form-control" rows="3" 
+                              placeholder="Descripción detallada del indicador"></textarea>
+                    <span asp-validation-for="Descripcion" class="text-danger"></span>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="mb-3">
+                            <label asp-for="Valor" class="form-label"></label>
+                            <input asp-for="Valor" class="form-control" placeholder="Ej: 150" />
+                            <span asp-validation-for="Valor" class="text-danger"></span>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="mb-3">
+                            <label asp-for="Unidad" class="form-label"></label>
+                            <input asp-for="Unidad" class="form-control" placeholder="Ej: unidades, kg, %" />
+                            <span asp-validation-for="Unidad" class="text-danger"></span>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="mb-3">
+                            <label asp-for="Fecha" class="form-label"></label>
+                            <input asp-for="Fecha" class="form-control" type="date" />
+                            <span asp-validation-for="Fecha" class="text-danger"></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mb-3">
+                    <label asp-for="Ambito" class="form-label"></label>
+                    <select asp-for="Ambito" class="form-select">
+                        <option value="">-- Seleccione un ámbito --</option>
+                        <option value="Empresa">Empresa</option>
+                        <option value="Departamento de Administración">Departamento de Administración</option>
+                        <option value="Departamento de Sistemas">Departamento de Sistemas</option>
+                        <option value="Departamento de Recursos Humanos">Departamento de Recursos Humanos</option>
+                        <option value="Departamento Comercial">Departamento Comercial</option>
+                        <option value="Departamento de Compras">Departamento de Compras</option>
+                        <option value="Departamento de Atención al Cliente">Departamento de Atención al Cliente</option>
+                        <option value="Departamento Jurídico">Departamento Jurídico</option>
+                        <option value="Departamento de Diseño">Departamento de Diseño</option>
+                        <option value="Dirección">Dirección</option>
+                        <option value="Producción">Producción</option>
+                        <option value="Flota">Flota</option>
+                    </select>
+                    <span asp-validation-for="Ambito" class="text-danger"></span>
+                </div>
+
+                <div class="mt-4">
+                    <button type="submit" class="btn btn-success">
+                        Crear Indicador
+                    </button>
+                    <a asp-action="Index" class="btn btn-secondary">
+                        Cancelar
+                    </a>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

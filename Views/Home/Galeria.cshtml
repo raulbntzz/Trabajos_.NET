@@ -1,0 +1,92 @@
+@model IEnumerable<AE_RA8_RBM.Models.ImagenGaleria>
+
+@{
+    ViewData["Title"] = "Galería - Digitalización y Sostenibilidad";
+}
+
+<div class="container mt-4">
+    <div class="text-center mb-5">
+        <h1 class="display-4">
+            <i class="bi bi-images"></i> Galería de Imágenes
+        </h1>
+        <p class="lead">Digitalización y Sostenibilidad en Imágenes</p>
+    </div>
+
+    <!-- Filtros por categoría -->
+    <div class="mb-4 text-center">
+        <div class="btn-group" role="group" aria-label="Filtros de categoría">
+            <button type="button" class="btn btn-outline-primary filter-btn active" data-filter="all">
+                <i class="bi bi-grid-3x3"></i> Todas
+            </button>
+            <button type="button" class="btn btn-outline-primary filter-btn" data-filter="Digitalización">
+                <i class="bi bi-cpu"></i> Digitalización
+            </button>
+            <button type="button" class="btn btn-outline-success filter-btn" data-filter="Sostenibilidad">
+                <i class="bi bi-tree"></i> Sostenibilidad
+            </button>
+        </div>
+    </div>
+
+    <!-- Galería de imágenes en grid -->
+    <div class="row g-4" id="galeria-grid">
+        @foreach (var imagen in Model)
+        {
+            <div class="col-md-4 col-sm-6 galeria-item" data-categoria="@imagen.Categoria">
+                <div class="card h-100 shadow-sm">
+                    <img src="@imagen.UrlImagen" 
+                         class="card-img-top galeria-imagen" 
+                         alt="@imagen.Titulo"
+                         loading="lazy"
+                         style="height: 250px; object-fit: cover;">
+                    <div class="card-body">
+                        <h5 class="card-title">
+                            @if (imagen.Categoria == "Digitalización")
+                            {
+                                <span class="badge bg-primary me-2">
+                                    <i class="bi bi-cpu"></i>
+                                </span>
+                            }
+                            else
+                            {
+                                <span class="badge bg-success me-2">
+                                    <i class="bi bi-tree"></i>
+                                </span>
+                            }
+                            @imagen.Titulo
+                        </h5>
+                        <p class="card-text text-muted">@imagen.Descripcion</p>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+
+@section Scripts {
+    <script>
+            // Filtrado de imágenes por categoría
+        document.addEventListener('DOMContentLoaded', function() {
+            const filterButtons = document.querySelectorAll('.filter-btn');
+            const galeriaItems = document.querySelectorAll('.galeria-item');
+
+            filterButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    // Actualizar botón activo
+                    filterButtons.forEach(btn => btn.classList.remove('active'));
+                    this.classList.add('active');
+
+                    const filter = this.getAttribute('data-filter');
+
+                    // Filtrar elementos
+                    galeriaItems.forEach(item => {
+                        if (filter === 'all' || item.getAttribute('data-categoria') === filter) {
+                            item.style.display = 'block';
+                            item.classList.add('fade-in');
+                        } else {
+                            item.style.display = 'none';
+                        }
+                    });
+                });
+            });
+        });
+    </script>
+}

@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v8.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v8.0": {
+      "AE_RA9_RBM/1.0.0": {
+        "runtime": {
+          "AE_RA9_RBM.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "AE_RA9_RBM/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
